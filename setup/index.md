@@ -2,8 +2,8 @@
 layout: page
 title: Testing Setup
 ---
-For Learners
-------------
+Testing your installation
+-------------------------
 
 This directory contains scripts for testing your machine to make sure
 you have the software you'll need for your workshop installed.  To use
@@ -64,33 +64,3 @@ System information
 os.name            : posix
 ...
 ~~~
-
-For Instructors
----------------
-
-`swc-installation-test-1.py` is pretty simple, and just checks that
-the students have a recent enough version of Python installed that
-they'll be able to parse `swc-installation-test-2.py`.  The latter
-checks for a list of dependencies and prints error messages if a
-package is not installed, or if the installed version is not current
-enough.  By default, the script checks for pretty much anything that
-has ever been used at a Software Carpentry workshop, which is probably
-not what you want for your particular workshop.
-
-Before your workshop, go through `swc-installation-test-2.py` and
-comment any dependencies you don't need out of the `CHECKS` list.  You
-might also want to skim through the minimum version numbers listed
-where particular dependencies are defined (e.g. `('git', 'Git', (1, 7,
-0), None)`).  For the most part, fairly conservative values have been
-selected, so students with modern machines should be fine.  If your
-workshop has stricter version requirements, feel free to bump them
-accordingly.
-
-Similarly, the virtual dependencies can be satisfied by any of several
-packages.  If you don't want to support a particular package (e.g. if
-you have no Emacs experience and don't want to be responsible for
-students who show up with Emacs as their only editor), you can comment
-out that particular `or_dependency`.
-
-Finally, don't forget to post your modified scripts somewhere where
-your students can download them.
