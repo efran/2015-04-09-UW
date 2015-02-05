@@ -1,8 +1,8 @@
 #--------------------------------------------------------------------------------
 # Values for this workshop - EDIT THIS SECTION.
 #--------------------------------------------------------------------------------
-lesson_repo     : "http://github.com/efran/2015-04-09-UW"
-lesson_site     : "http://efran.github.io/2015-04-09-UW"
+workshop_repo   : "http://github.com/efran/2015-04-09-UW"
+workshop_site   : "http://efran.github.io/2015-04-09-UW"
 #--------------------------------------------------------------------------------
 # Standard Software Carpentry settings - should not need to be modified.
 #--------------------------------------------------------------------------------
