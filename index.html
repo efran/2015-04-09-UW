@@ -29,7 +29,6 @@ eventbrite: 15561681408 # FIXME (delete this if not used, otherwise uncomment an
 -->
 
 
-
 <h2>General Information</h2>
 
 <p>
@@ -56,6 +55,13 @@ eventbrite: 15561681408 # FIXME (delete this if not used, otherwise uncomment an
   that you can join to keep up with local plans, to get advice, ask questions, 
   etc. after the workshop is over.
   
+</p>
+<p align="center">
+  <em>
+    For more information on what we teach and why,
+    please see our paper
+    "<a href="http://journals.plos.org/plosbiology/article?id=10.1371/journal.pbio.1001745">Best Practices for Scientific Computing</a>".
+  </em>
 </p>
 
 <!--
@@ -353,7 +359,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
   that you have the right software installed.
 </p>
 
-<div> <!-- Start of 'editor' section. -->
+<div id="editor"> <!-- Start of 'editor' section. -->
   <h3>Text Editor</h3>
 
   <p>
@@ -368,7 +374,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="editor-windows">Windows</h4>
       <p>
 	<code>nano</code> is the editor installed by the Software
 	Carpentry Installer, it is a basic editor integrated into the
@@ -384,7 +390,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="editor-macosx">Mac OS X</h4>
       <p>
 	We recommend
 	<a href="http://www.barebones.com/products/textwrangler/">Text Wrangler</a> or
@@ -394,7 +400,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="editor-linux">Linux</h4>
       <p>
 	<a href="http://kate-editor.org/">Kate</a> is one option for
 	Linux users.  In a pinch, you can use <code>nano</code>, which
@@ -404,7 +410,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
   </div>
 </div> <!-- End of 'editor' section. -->
 
-<div> <!-- Start of 'shell' section. -->
+<div id="shell"> <!-- Start of 'shell' section. -->
   <h3>The Bash Shell</h3>
 
   <p>
@@ -414,36 +420,27 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="shell-windows">Windows</h4>
       <p>
-	Install Git for Windows by download and running
+	Install Git for Windows by downloading and running
 	<a href="http://msysgit.github.io/">the installer</a>.
 	This will provide you with both Git and Bash in the Git Bash program.
       </p>
-      <h4>Software Carpentry Installer</h4>
+      <h4>Software Carpentry Windows Installer</h4>
+      <p>It installs and configures <code>nano</code> (<a href="{{site.swc_github}}/windows-installer">Among other things</a>)</p>
       <p><em>This installer requires an active internet connection.</em></p>
-      <p>After installing Python and Git Bash:</p>
+      <p>After installing Git Bash:</p>
       <ul>
 	<li>
-          Download the <a href="{{site.swc_installer}}">installer</a>.
-	</li>
-	<li>
-          If the file opens directly in the browser
-          select <strong>File&rarr;Save Page As</strong> to download it
-          to your computer.
+          Download the <a href="{{site.swc_installer}}">Software Carpentry Windows installer</a>.
 	</li>
 	<li>
           Double click on the file to run it.
 	</li>
       </ul>
-      <p>
-	Information about the SWC Windows Installer,
-	including the source code, can be found at
-	<a href="https://github.com/swcarpentry/windows-installer">https://github.com/swcarpentry/windows-installer</a>.
-      </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="shell-macosx">Mac OS X</h4>
       <p>
 	The default shell in all versions of Mac OS X is bash, so no
 	need to install anything.  You access bash from the Terminal
@@ -453,7 +450,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="shell-linux">Linux</h4>
       <p>
 	The default shell is usually <code>bash</code>, but if your
 	machine is set up differently you can run it by opening a
@@ -464,26 +461,30 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
   </div>
 <div> <!-- End of 'shell' section. -->
 
-<div> <!-- Start of 'Git' section. -->
+<div id='git'> <!-- Start of 'Git' section. GitHub browser compatability
+           is given at https://help.github.com/articles/supported-browsers/-->
   <h3>Git</h3>
 
   <p>
     Git is a version control system that lets you track who made changes
     to what when and has options for easily updating a shared or public
     version of your code
-    on <a href="https://github.com/">github.com</a>.
+    on <a href="https://github.com/">github.com</a>. You will need a
+    <a href="https://help.github.com/articles/supported-browsers/">supported</a>
+    web browser (current versions of Chrome, Firefox or Safari,
+    or Internet Explorer version 9 or above).
   </p>
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="git-windows">Windows</h4>
       <p>
 	Git should be installed on your computer as part of your Bash
 	install (described above).
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="git-macosx">Mac OS X</h4>
       <p>
 	<strong>For OS X 10.8 and higher</strong>, install Git for Mac
 	by downloading and running
@@ -498,7 +499,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="git-linux">Linux</h4>
       <p>
 	If Git is not already available on your machine you can try to
 	install it via your distro's package manager. For Debian/Ubuntu run
@@ -509,7 +510,10 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
   </div>
 </div> <!-- End of 'Git' section. -->
 
-<div> <!-- Start of 'Python' section. -->
+<div id="python"> <!-- Start of 'Python' section. Remove the third paragraph if
+           the workshop will teach Python using something other than
+           the IPython notebook.
+           Details at http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility -->
   <h3>Python</h3>
 
   <p>
@@ -519,37 +523,54 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
     a bit difficult, so we recommend an all-in-one installer.
   </p>
 
+    <p>
+      Regardless of how you choose to install it,
+      <strong>please make sure you install Python version 2.x and not version 3.x</strong>
+      (e.g., 2.7 is fine but not 3.4).
+      Python 3 introduced changes that will break some of the code we teach during the workshop.
+    </p>
+
+    <p>
+      We will teach Python using the IPython notebook, a programming environment
+      that runs in a web browser. For this to work you will need a reasonably
+      up-to-date browser. The current versions of the Chrome, Safari and
+      Firefox browsers are all <a 
+      href='http://ipython.org/ipython-doc/2/install/install.html#browser-compatibility'>supported</a> 
+      (some older browsers, including Internet Explorer version 9 
+      and below, are not).
+    </p>
+
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="python-windows">Windows</h4>
       <ul>
 	<li>
           Download and
           install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
 	</li>
 	<li>
-          Use all of the defaults for installation
-          <em>except</em> make sure to check <strong>Make Anaconda the
-            default Python</strong>.
+          Download the default Python 2 installer (do not follow the link to version 3).
+	  Use all of the defaults for installation
+          <em>except</em> make sure to check
+	  <strong>Make Anaconda the default Python</strong>.
 	</li>
       </ul>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="python-macosx">Mac OS X</h4>
       <ul>
 	<li>
           Download and
           install <a href="https://store.continuum.io/cshop/anaconda/">Anaconda</a>.
 	</li>
 	<li>
-          Use all of the defaults for installation
-          <em>except</em>
-          make sure to check <strong>Make Anaconda the default Python</strong>.
+          Download the default Python 2 installer (do not follow the link to version 3).
+	  Use all of the defaults for installation.
 	</li>
       </ul>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="python-linux">Linux</h4>
       <p>
 	We recommend the all-in-one scientific Python installer
 	<a href="http://continuum.io/downloads.html">Anaconda</a>.
@@ -562,6 +583,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
 	<li>
           Download the installer that matches your operating
           system and save it in your home folder.
+	  Download the default Python 2 installer (do not follow the link to version 3). 
 	</li>
 	<li>
           Open a terminal window.
@@ -585,7 +607,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
   </div>
 </div> <!-- End of 'Python' section. -->
 
-<div> <!-- Start of 'R' section. -->
+<div id="r"> <!-- Start of 'R' section. -->
   <h3>R</h3>
 
   <p>
@@ -597,7 +619,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="r-windows">Windows</h4>
       <p>
 	Install R by downloading and running
 	<a href="http://cran.r-project.org/bin/windows/base/release.htm">this .exe file</a>
@@ -607,7 +629,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="r-macosx">Mac OS X</h4>
       <p>
 	Install R by downloading and running
 	<a href="http://cran.r-project.org/bin/macosx/R-latest.pkg">this .pkg file</a>
@@ -617,7 +639,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="r-linux">Linux</h4>
       <p>
 	You can download the binary files for your distribution
 	from <a href="http://cran.r-project.org/index.html">CRAN</a>. Or
@@ -630,7 +652,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
   </div>
 </div> <!-- End of 'R' section. -->
 
-<div> <!-- Start of 'SQLite' section. -->
+<div id="sql"> <!-- Start of 'SQLite' section. -->
   <h3>SQLite</h3>
 
   <p>
@@ -641,21 +663,21 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
 
   <div class="row">
     <div class="col-md-4">
-      <h4>Windows</h4>
+      <h4 id="sql-windows">Windows</h4>
       <p>
-	Download the <a href="{{site.swc_files}}/sqlite3.exe">sqlite3
-	  program</a> and put it in the directory where you are running
-	examples.
+      The <a href="{{site.swc_github}}/windows-installer">Software Carpentry
+          Windows Installer</a> installs <code>sqlite3</code> for Windows. If
+      you used the installer to configure `nano`, you don't need to run it again.
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Mac OS X</h4>
+      <h4 id="sql-macosx">Mac OS X</h4>
       <p>
 	<code>sqlite3</code> comes pre-installed on Mac OS X.
       </p>
     </div>
     <div class="col-md-4">
-      <h4>Linux</h4>
+      <h4 id="sql-linux">Linux</h4>
       <p>
 	<code>sqlite3</code> comes pre-installed on Linux.
       </p>
@@ -666,7 +688,7 @@ We will use these Etherpads (<a href="https://etherpad.mozilla.org/2015-04-09-uw
 <!--
   Uncomment this section if you are using our virtual machine.
 
-<div>
+<div id="vm">
   <h3>Virtual Machine</h3>
 
   <p>
